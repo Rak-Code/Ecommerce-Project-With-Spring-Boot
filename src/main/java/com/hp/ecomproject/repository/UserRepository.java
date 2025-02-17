@@ -7,9 +7,12 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.hp.ecomproject.entity.User;
+import com.hp.ecomproject.projection.UserProjection;
 
-@RepositoryRestResource
+@RepositoryRestResource(excerptProjection = UserProjection.class)
 @CrossOrigin(origins = "*")
 public interface UserRepository extends JpaRepository<User, UUID> {
+	
+	
 
 }

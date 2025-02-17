@@ -22,7 +22,6 @@ public class Address {
     @NotBlank
     @NotNull
     private String addressLineOne;
-
     private String addressLineTwo;
 
     @ManyToOne
